@@ -1,5 +1,3 @@
-import { PostContent } from "../lib/posts";
-
 type Props = {
   portfolio: {
   project?: string;
