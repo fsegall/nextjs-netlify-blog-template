@@ -73,7 +73,6 @@ export default function Index() {
             border-radius: 10px;
             max-width: 300px;
             display: grid;
-            margin: auto;
             justify-content: center;
             background-color: #b0bdbf;
             border: none;
@@ -94,6 +93,7 @@ export default function Index() {
           .labelStyle {
             width: 238px;
             margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
             color: #222;;
             font-weight: bold;
           }
@@ -103,7 +103,7 @@ export default function Index() {
           }
           
           .inputStyle {
-            width: 100%;
+            width: 280px;
             margin-right: 0.2rem;
             padding: 5px 10px;
             border-radius: 4px;
