@@ -10,7 +10,7 @@ export type PostContent = {
   readonly title: string;
   readonly slug: string;
   readonly tags?: string[];
-  readonly projectName ?: string;
+  readonly project?: string;
   readonly techs?: string[];
   readonly link?: string;
   readonly fullPath: string;
@@ -42,7 +42,7 @@ export function fetchPostContent(): PostContent[] {
         title: string;
         tags: string[];
         slug: string;
-        projectName ?: string;
+        project?: string;
         techs?: string[];
         link?: string;
         fullPath: string,

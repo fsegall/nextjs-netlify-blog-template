@@ -18,6 +18,9 @@ type Props = {
   date: Date;
   slug: string;
   tags: string[];
+  project?: string;
+  techs?: string[];
+  link?: string;
   author: string;
   description?: string;
   children: React.ReactNode;
@@ -28,6 +31,9 @@ export default function PostLayout({
   slug,
   author,
   tags,
+  project,
+  techs,
+  link,
   description = "",
   children,
 }: Props) {
@@ -40,6 +46,9 @@ export default function PostLayout({
         title={title}
         keywords={keywords}
         description={description}
+        project={project}
+        techs={techs}
+        link={link}
       />
       <TwitterCardMeta
         url={`/posts/${slug}`}
@@ -70,6 +79,10 @@ export default function PostLayout({
               <div>
                 <Author author={getAuthor(author)} />
               </div>
+              {project? <h1>{project}</h1> : null}
+              {techs.length > 0 ? <h3>Tech Stack</h3>: null}
+              <ul>{techs.length > 0 ? techs.map(tech => <li key={tech}>{tech}</li>): null }</ul>
+              {link ? <a href={link}>Github Repo</a>: null}
             </div>
           </header>
           <div className={styles.content}>{children}</div>

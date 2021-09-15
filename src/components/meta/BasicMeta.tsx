@@ -6,6 +6,9 @@ type Props = {
   description?: string;
   keywords?: string[];
   author?: string;
+  project?: string;
+  techs?: string[];
+  link?: string;
   url: string;
 };
 export default function BasicMeta({
@@ -13,6 +16,9 @@ export default function BasicMeta({
   description,
   keywords,
   author,
+  project,
+  techs,
+  link,
   url,
 }: Props) {
   return (
