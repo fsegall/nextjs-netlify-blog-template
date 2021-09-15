@@ -1,6 +1,8 @@
 tags:
+  - slug: portfolio
+    name: portfolio
   - slug: document
-    name: document
+    name: document    
   - slug: mock
     name: mock
   - slug: style

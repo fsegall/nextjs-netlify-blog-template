@@ -1,4 +1,8 @@
 authors:
+  - slug: fsegall
+    name: Felipe Segall
+    introduction:
+      Developer - Node.js, React
   - slug: wutali
     name: Takahiro Fujiwara
     introduction:

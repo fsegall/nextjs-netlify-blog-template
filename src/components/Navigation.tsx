@@ -28,7 +28,7 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
-            <Link href="/portfolio">
+            <Link href="/posts/tags/portfolio">
               <a
                 className={
                   router.pathname.startsWith("/portfolio") ? "active" : null
