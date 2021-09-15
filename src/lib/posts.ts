@@ -12,7 +12,8 @@ export type PostContent = {
   readonly tags?: string[];
   readonly project?: string;
   readonly techs?: string[];
-  readonly link?: string;
+  readonly repoUrl?: string;
+  readonly projectSite?: string;
   readonly fullPath: string;
 };
 
@@ -44,7 +45,8 @@ export function fetchPostContent(): PostContent[] {
         slug: string;
         project?: string;
         techs?: string[];
-        link?: string;
+        repoUrl?: string;
+        projectSite?: string;
         fullPath: string,
       };
       matterData.fullPath = fullPath;

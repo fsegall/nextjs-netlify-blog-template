@@ -20,7 +20,8 @@ export type Props = {
   tags: string[];
   project?: string;
   techs?: string[];
-  link?: string;
+  repoUrl?: string;
+  projectSite?: string;
   author: string;
   description?: string;
   source: MdxRemote.Source;
@@ -40,7 +41,8 @@ export default function Post({
   tags,
   project,
   techs,
-  link,
+  repoUrl,
+  projectSite,
   author,
   description = "",
   source,
@@ -54,7 +56,8 @@ export default function Post({
       tags={tags}
       project={project}
       techs={techs}
-      link={link}
+      repoUrl={repoUrl}
+      projectSite={projectSite}
       author={author}
       description={description}
     >
@@ -87,7 +90,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       tags: data.tags,
       project: data.project || "",
       techs: data.techs  || [],
-      link: data.link  || "",
+      repoUrl: data.repoUrl || "",
+      projectSite: data.projectSite || "",
       author: data.author,
       source: mdxSource
     },

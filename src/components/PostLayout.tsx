@@ -21,7 +21,8 @@ type Props = {
   tags: string[];
   project?: string;
   techs?: string[];
-  link?: string;
+  repoUrl?: string;
+  projectSite: string;
   author: string;
   description?: string;
   children: React.ReactNode;
@@ -34,7 +35,8 @@ export default function PostLayout({
   tags,
   project,
   techs,
-  link,
+  repoUrl,
+  projectSite,
   description = "",
   children,
 }: Props) {
@@ -49,7 +51,8 @@ export default function PostLayout({
         description={description}
         project={project}
         techs={techs}
-        link={link}
+        repoUrl={repoUrl}
+        projectSite={projectSite}
       />
       <TwitterCardMeta
         url={`/posts/${slug}`}
@@ -83,7 +86,9 @@ export default function PostLayout({
               <PortfolioItem portfolio={{
                 project,
                 techs,
-                link,}} 
+                repoUrl,
+                projectSite
+              }} 
               />
             </div>
           </header>

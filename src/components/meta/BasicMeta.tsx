@@ -8,7 +8,8 @@ type Props = {
   author?: string;
   project?: string;
   techs?: string[];
-  link?: string;
+  repoUrl?: string;
+  projectSite?: string;
   url: string;
 };
 export default function BasicMeta({
@@ -18,7 +19,8 @@ export default function BasicMeta({
   author,
   project,
   techs,
-  link,
+  repoUrl,
+  projectSite,
   url,
 }: Props) {
   return (
