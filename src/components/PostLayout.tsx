@@ -12,6 +12,7 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+import PortfolioItem from "./PortfolioItem";
 
 type Props = {
   title: string;
@@ -79,10 +80,11 @@ export default function PostLayout({
               <div>
                 <Author author={getAuthor(author)} />
               </div>
-              {project? <h1>{project}</h1> : null}
-              {techs.length > 0 ? <h3>Tech Stack</h3>: null}
-              <ul>{techs.length > 0 ? techs.map(tech => <li key={tech}>{tech}</li>): null }</ul>
-              {link ? <a href={link}>Github Repo</a>: null}
+              <PortfolioItem portfolio={{
+                project,
+                techs,
+                link,}} 
+              />
             </div>
           </header>
           <div className={styles.content}>{children}</div>
