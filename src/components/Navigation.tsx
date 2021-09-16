@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function Navigation() {
   const router = useRouter();
   const [active, setActive] = useState(false);
+console.log(router.pathname.slice(1, 6))
   return (
     <>
       <Burger active={active} onClick={() => setActive(!active)} />
@@ -20,7 +21,7 @@ export default function Navigation() {
             <Link href="/posts">
               <a
                 className={
-                  router.pathname.startsWith("/posts") ? "active" : null
+                  router.pathname.slice(1, 6) === "posts" && router.pathname.length === 6 ? "active" : null
                 }
               >
                 blog
@@ -31,7 +32,7 @@ export default function Navigation() {
             <Link href="/posts/tags/portfolio">
               <a
                 className={
-                  router.pathname.startsWith("/portfolio") ? "active" : null
+                  router.pathname.slice(17, 21) === "slug" ? "active" : null
                 }
               >
                 Portfolio
@@ -88,7 +89,6 @@ export default function Navigation() {
             .active {
               color: #222;
             }
-
             @media (min-width: 769px) {
               .container {
                 width: 7rem;
