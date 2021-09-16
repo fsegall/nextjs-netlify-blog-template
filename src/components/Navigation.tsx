@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Navigation() {
   const router = useRouter();
   const [active, setActive] = useState(false);
-console.log(router.pathname.slice(1, 6))
+  
   return (
     <>
       <Burger active={active} onClick={() => setActive(!active)} />
@@ -32,7 +32,7 @@ console.log(router.pathname.slice(1, 6))
             <Link href="/posts/tags/portfolio">
               <a
                 className={
-                  router.pathname.slice(17, 21) === "slug" ? "active" : null
+                  router.pathname.slice(17, 21) === "slug" ? "active"  : null
                 }
               >
                 Portfolio
