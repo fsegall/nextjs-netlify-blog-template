@@ -3,6 +3,7 @@ module.exports = ({
 /*   future: {
     webpack5: true,
   }, */
+  distDir: 'dist',
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
       ...[
