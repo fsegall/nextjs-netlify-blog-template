@@ -22,7 +22,7 @@ export function SocialList({}) {
         rel="noopener"
       >
       <Image
-      src="/asstes/image/github-alt.svg"
+      src="/assets/github-alt.svg"
       height={24}
       width={24}
       alt="GitHub link"
