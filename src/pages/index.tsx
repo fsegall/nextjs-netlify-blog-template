@@ -14,6 +14,7 @@ export default function Index() {
         <div>
           <h1>
             Hi, I'm Felipe <span className="fancy">!</span>
+            <p className="subtitle">Full-stack Software Engineer</p>
           </h1>
           <span className="handle">@fsegall.com</span>
           <h2></h2>
@@ -47,7 +48,11 @@ export default function Index() {
           color: #9b9b9b;
           letter-spacing: 0.05em;
         }
-
+        .subtitle {
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1;
+        }
         @media (min-width: 769px) {
           h1 {
             font-size: 3rem;

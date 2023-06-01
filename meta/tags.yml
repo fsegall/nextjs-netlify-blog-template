@@ -1,6 +1,8 @@
 tags:
   - slug: portfolio
     name: portfolio
+  - slug: resume
+    name: resume
   - slug: document
     name: document    
   - slug: mock
