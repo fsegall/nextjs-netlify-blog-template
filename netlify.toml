@@ -1,4 +1,3 @@
-[[redirects]]
-from = "master--gifted-ride-645681.netlify.app/"
-to = "/"
-status = 301
+[build]
+  command = "next build && next export"
+  publish = "out"
